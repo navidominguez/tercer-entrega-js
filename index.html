@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feel Good Rico y saludable</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<body>
+    <header class="encabezado">
+        <h1>Feel<span class="verde">Good</span></h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="ingredientes.html">Ingredientes</a></li>
+                <li><a href="vegan.html">Vegan</a></li>
+                <li><a href="comocomprar.html">Cómo comprar</a></li>
+            </ul>
+        </nav>
+
+        
+    </header>
+
+    <section class="banner1">
+        <div class="bannerContenido">
+            <h2>Panificación <span class="verde">Integral</span> </h2>
+            <p>Feel Good Rico y Saludable</p>
+        </div>
+    </section>
+
+
+    <section id="productos" class="productos">
+        <h3>Productos</h3>
+        <p>Budines, panes, alfajores y más...</p>
+    </section>
+
+    <main>
+        <div id="error-container" style="color: rgb(255, 0, 0); display: none;"></div>
+        <h1 id="greeting">Comer saludable es delicioso</h1>
+    </main>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar productos..." onkeyup="searchProducts()">
+        <button onclick="searchProducts()">Buscar</button>
+    </div>
+    <div class="cart">
+        <div id="notification" class="notification hidden">Has alcanzado el límite de 20 productos en el carrito.</div>
+        <h3>
+            <span class="cart-title">Carrito</span>
+            <span class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-counter" class="cart-counter">0</span>
+            </span>
+        </h3>
+        
+        <ul id="cart-items"></ul>
+        <button onclick="clearCart()" class="clear-cart-btn">Vaciar Carrito</button>
+        <p id="total-price">Total: $0.00</p>
+    </div>
+    <div class="products">
+        <h1>Nuestros productos</h1>
+        <div id="product-list" class="product-list"></div>
+    </div>
+    <script src="./js/productos.js"></script>
+</body>
+</html>
